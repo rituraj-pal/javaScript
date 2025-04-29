@@ -32,3 +32,28 @@ const myFunction=function(){
 console.log(heros)
 
 
+console.log("***************************************************************************");
+
+// stack(Primitive) ,heap (Non-Primitive)
+
+let youtubename="riturajbhaijii"
+let anothername=youtubename
+ anothername="bhaijio"
+
+ console.log(youtubename);
+ console.log(anothername);
+
+
+ let userOne={
+    email : "rituraj@gmail.com",
+    upi : "paytmdotcom"
+ }
+
+ let  userTwo=userOne
+ userTwo.email="hiteshbhai@gmail.com"
+
+ console.log(userOne.email)
+ console.log(userTwo.email)
+
+//  console.log(userOne)
+//  console.log(userTwo)

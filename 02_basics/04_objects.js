@@ -48,3 +48,28 @@ console.log(Object.values(Instagram))
 console.log(Object.entries(Instagram))
 
 console.log(Instagram.hasOwnProperty('isLoggedIn'))
+
+const course=
+{
+   "name": "js in hindi",
+   "price" : "999",
+   "courseinstructor" : "hitesh chaudhary"
+}
+console.log(course.courseinstructor);
+
+const {courseinstructor} =course
+console.log(courseinstructor)
+
+// api call
+{
+    "name": "js in hindi",
+   "price" : "999",
+   "courseinstructor" : "hitesh chaudhary"
+
+}
+
+[
+    {},
+    {},
+    {}
+]
