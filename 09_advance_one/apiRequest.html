@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    new XMLHttpRequest()	Creates a new XMLHttpRequest object <br>
+           abort()	Cancels the current request <br>
+getAllResponseHeaders()	Returns header information<br>
+getResponseHeader()	Returns specific header information<br>
+open(method,url,async,user,psw)	Specifies the request<br>
+
+method: the request type GET or POST<br>
+url: the file location<br>
+async: true (asynchronous) or false (synchronous)<br>
+user: optional user name <br>
+psw: optional password<br>
+send()	Sends the request to the server<br>
+Used for GET requests<br>
+send(string)	Sends the request to the server.<br>
+Used for POST requests<br>
+setRequestHeader()	Adds a label/value pair to the header to be sent<br>
+    
+</body>
+<script>
+    const requestUrl='https://api.github.com/users/rituraj-pal'
+    const xhr=new XMLHttpRequest();
+    xhr.open('GET',requestUrl)
+    xhr.onreadystatechange=function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState===4){
+            const data=JSON.parse(this.responseText)
+            console.log(typeof data)
+            console.log(data.public_repos)
+        }
+    }
+    xhr.send();
+
+</script>
+</html>
